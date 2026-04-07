@@ -93,8 +93,7 @@ Get Odoo and addons code with:
 invoke img-build --pull
 invoke git-aggregate
 # use addons cli within docker container to install extras & private modules from addons.yaml
-# need to confirm this exact command syntax, but this very roughly what it would look like
-# docker compose r -rm odoo addons install --extra --private 
+docker compose run --rm odoo addons init --extra --private 
 ```
 
 Initialize a new empty database with:
