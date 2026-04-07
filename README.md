@@ -39,6 +39,7 @@ This project lets you maintain [Odoo][] deployments based on [Doodba][] using
 This project itself is just the template, but you need to install these tools to use it:
 
 - Linux<sup>1</sup>
+- [mise]
 - [copier][]
 - [Docker](https://docs.docker.com/)
   - [Compose V2 plugin](https://docs.docker.com/compose/install/)
@@ -49,9 +50,22 @@ This project itself is just the template, but you need to install these tools to
 - [python](https://www.python.org/) 3.8.1+
 - [venv](https://docs.python.org/3/library/venv.html)
 
-Install non-python apps with your distro's recommended package manager. The recommended
-way to install Python CLI apps is [pipx](https://pipxproject.github.io/pipx/):
+Install non-python apps with your distro's recommended package manager. 
 
+The recommended way is to create a mise.local.toml in the root of the repository:
+```bash
+# ~/work-folder/this-project-name
+touch mise.local.toml
+mise use copier
+mise use ux
+mise use python@3.12
+mise use pre-commit
+mise use pipx:invoke
+# check tools are installed properly
+mise list
+```
+
+The alternative way is to install Python CLI apps with [pipx](https://pipxproject.github.io/pipx/):
 ```bash
 python3 -m pip install --break-system-packages --user pipx
 pipx install copier
@@ -65,7 +79,7 @@ pipx ensurepath
 Once you installed everything, you can now use Copier to copy this template:
 
 ```bash
-copier copy https://github.com/Tecnativa/doodba-copier-template ~/path/to/your/subproject
+mise exec -- copier copy --trust https://github.com/walterhoops/OdooDockerCopier ~/work-folder/this-project-name
 ```
 
 Copier will ask you a lot of questions. Answer them to properly generate the template.
