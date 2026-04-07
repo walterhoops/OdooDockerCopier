@@ -39,7 +39,7 @@ This project lets you maintain [Odoo][] deployments based on [Doodba][] using
 This project itself is just the template, but you need to install these tools to use it:
 
 - Linux<sup>1</sup>
-- [mise]
+- [mise](https://mise.jdx.dev/)
 - [copier][]
 - [Docker](https://docs.docker.com/)
   - [Compose V2 plugin](https://docs.docker.com/compose/install/)
