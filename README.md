@@ -79,7 +79,7 @@ pipx ensurepath
 Once you installed everything, you can now use Copier to copy this template:
 
 ```bash
-mise exec -- copier copy --trust https://github.com/walterhoops/OdooDockerCopier ~/work-folder/this-project-name
+mise exec -- copier copy --trust https://github.com/walterhoops/odoocker ~/work-folder/this-project-name
 ```
 
 Copier will ask you a lot of questions. Answer them to properly generate the template.
