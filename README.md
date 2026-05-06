@@ -57,7 +57,7 @@ The recommended way is to create a mise.local.toml in the root of the repository
 # ~/work-folder/this-project-name
 touch mise.local.toml
 mise use copier
-mise use ux
+mise use uv
 mise use python@3.12
 mise use pre-commit
 mise use pipx:invoke
